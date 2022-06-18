@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/MGRaghavendra/pixel-convertor/static/css/main.dd9ecbc4.css",
+    "main.js": "/MGRaghavendra/pixel-convertor/static/js/main.a5013d8c.js",
+    "static/js/787.785f849d.chunk.js": "/MGRaghavendra/pixel-convertor/static/js/787.785f849d.chunk.js",
+    "index.html": "/MGRaghavendra/pixel-convertor/index.html",
+    "main.dd9ecbc4.css.map": "/MGRaghavendra/pixel-convertor/static/css/main.dd9ecbc4.css.map",
+    "main.a5013d8c.js.map": "/MGRaghavendra/pixel-convertor/static/js/main.a5013d8c.js.map",
+    "787.785f849d.chunk.js.map": "/MGRaghavendra/pixel-convertor/static/js/787.785f849d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd9ecbc4.css",
+    "static/js/main.a5013d8c.js"
+  ]
+}
