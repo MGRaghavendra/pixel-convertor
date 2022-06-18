@@ -1,0 +1,18 @@
+.Input_Container input {
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 8px;
+  padding: 8px;
+  outline-color: rgba(255, 255, 255, 0.5);
+  border: none;
+}
+
+.Input_Container .tittle {
+  color: #fff;
+  cursor: pointer;
+  caret-color: transparen;
+  font-size: 22px;
+  font-weight: bolder;
+  text-align: center;
+}
