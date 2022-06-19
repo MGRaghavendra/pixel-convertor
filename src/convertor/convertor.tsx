@@ -12,32 +12,27 @@ const Convertor: FC = () => {
       setSrcpixels(((dst * 1920) / 1280).toString());
     }
   };
-  const sourcetodestiny = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>, from: string) => {
     if (e.target.value === '') {
       setSrcpixels('');
       setDstpixels('');
       return;
-    }
-    if (!isNaN(Number(e.target.value))) {
-      setSrcpixels(e.target.value);
-      convert(Number(e.target.value), Number(dstpixels), '1280');
-    }
-  };
-  const destinytosource = (e: ChangeEvent<HTMLInputElement>) => {
-    if (e.target.value === '') {
-      setSrcpixels('');
-      setDstpixels('');
-      return;
-    }
-    if (!isNaN(Number(e.target.value))) {
-      setDstpixels(e.target.value);
-      convert(Number(srcpixels), Number(e.target.value), '1920');
+    } else if (from === '1920') {
+      if (!isNaN(Number(e.target.value))) {
+        setSrcpixels(e.target.value);
+        convert(Number(e.target.value), Number(dstpixels), '1280');
+      }
+    } else if (from === '1280') {
+      if (!isNaN(Number(e.target.value))) {
+        setDstpixels(e.target.value);
+        convert(Number(srcpixels), Number(e.target.value), '1920');
+      }
     }
   };
   return (
     <div className="container">
-      <Source handleChange={sourcetodestiny} value={srcpixels} />
-      <Destiny handleChange={destinytosource} value={dstpixels} />
+      <Source handleChange={handleChange} value={srcpixels} from="1920" />
+      <Destiny handleChange={handleChange} value={dstpixels} from="1280" />
     </div>
   );
 };

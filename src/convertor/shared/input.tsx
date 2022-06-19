@@ -2,13 +2,14 @@ import React, { ChangeEvent, FC } from 'react';
 import './input.css';
 
 interface Iinput {
-  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  handleChange: (e: ChangeEvent<HTMLInputElement>, from: string) => void;
   value: string;
   tittle: string;
+  from: string;
 }
-const Input: FC<Iinput> = ({ handleChange, value, tittle }) => {
+const Input: FC<Iinput> = ({ handleChange, value, tittle, from }) => {
   const handleOnchange = (e: ChangeEvent<HTMLInputElement>) => {
-    handleChange(e);
+    handleChange(e, from);
   };
   return (
     <div className="Input_Container">
